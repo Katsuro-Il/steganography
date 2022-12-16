@@ -151,14 +151,7 @@ def Steganography():
 
     EncodeMessage(source, message, destination, tech, q)
     print('Сообщение:', DecodeMessage(destination, tech, q))
-##################################################################
-q = 12
-
-EncodeMessage('/Users/katsuro/Downloads/8881a862056e423e35f4f2975acdb988.png',
-              'Папа у Васи силён в математике. Учится папа за Васю весь год!!!',
-              '/Users/katsuro/Downloads/encoded.png', 'LSB', q)
-
-print('Сообщение:', DecodeMessage('/Users/katsuro/Downloads/encoded.png', 'LSB', q))
 
 
-#Steganography()
+
+Steganography()
