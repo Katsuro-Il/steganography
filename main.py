@@ -34,7 +34,7 @@ def EncodeByteQIM(c, b, q):  # q - Шаг квантования, всегда �
 # Кодирует сообщение message в изображение, взятое по пути source, и сохраняет
 # изменённое изображение по пути destination. Метод кодирования определется параметром
 # tech: LSB, PM1 или QIM (последний метод требует опциональный параметр q - шаг квантования).
-def EncodeMessage(source, message, destination, tech, q=0):
+def EncodeMessage(source, message, destination, tech, q=2):
     img = Image.open(source, 'r')
     # Создаём одномерный масссив, содержащий по три элемента (RGB) для каждого пикселя
     array = np.array(list(img.getdata()))
@@ -86,7 +86,7 @@ def EncodeMessage(source, message, destination, tech, q=0):
 
 
 # Ищет в изображении по пути source сообщение, закодирование известным методом, и возвращает его.
-def DecodeMessage(source, tech, q=0):
+def DecodeMessage(source, tech, q=2):
     img = Image.open(source, 'r')
     array = np.array(list(img.getdata()))
 
